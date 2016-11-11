@@ -10,7 +10,7 @@ login_manager = LoginManager()
 
 
 def create_app(config) -> Flask:
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='assets/static')
     app.config.from_pyfile(config)
 
     db.init_app(app)
